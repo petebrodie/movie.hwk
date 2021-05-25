@@ -1,19 +1,20 @@
-import React from "react";
-import Movie from "./Movies";
+import React from 'react';
+import MovieItem from './MovieItem';
 
 const MovieList = ({movies}) => {
-
-  const movieNodes = movies.map(movie => {
+  const movieItems = movies.map((movie) => {
     return (
-      <Movie name={movie.name} key={movie.id}>{movie.url}</Movie>
+      <MovieItem movie={movie} key={movie.id}/>
     );
   });
 
-  return(
-    <>
-      {movieNodes}
-    </>
-  )
+  return (
+    <div className='movie-list'>
+      <ul>
+        {movieItems}
+      </ul>
+    </div>
+  );
 
 }
 

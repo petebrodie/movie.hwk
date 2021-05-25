@@ -1,8 +1,9 @@
-import './App.css';
+import React from 'react';
+import ReleasesBox from './containers/ReleasesBox';
 
-function App() {
+const App = () => {
   return (
-    <h1>Upcoming Movie Releases For The UK</h1>
+    <ReleasesBox />
   );
 }
 
